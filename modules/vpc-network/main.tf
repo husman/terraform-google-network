@@ -52,8 +52,6 @@ resource "google_compute_subnetwork" "vpc_subnetwork_public" {
       0
     )
   }
-
-  enable_flow_logs = var.enable_flow_logging
 }
 
 resource "google_compute_router_nat" "vpc_nat" {
@@ -100,8 +98,6 @@ resource "google_compute_subnetwork" "vpc_subnetwork_private" {
       1 * (1 + var.secondary_cidr_subnetwork_spacing)
     )
   }
-
-  enable_flow_logs = var.enable_flow_logging
 }
 
 # ---------------------------------------------------------------------------------------------------------------------
